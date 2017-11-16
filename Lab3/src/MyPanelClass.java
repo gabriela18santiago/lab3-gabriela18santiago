@@ -25,10 +25,10 @@ public class MyPanelClass extends JPanel {
                         g.fillRect(x1, y1, width + 1, height + 1);
                         
                       //Draw a border
-                        g.setColor(Color.YELLOW);
-                        g.drawRect(x1 +1, y1 +1 , width-1, height);
-                        g.setColor(Color.CYAN);
-                        g.drawRect(x1 +6, y1 +6, width-10, height -10);
+//                        g.setColor(Color.YELLOW);
+//                        g.drawRect(x1 +1, y1 +1 , width-1, height);
+//                        g.setColor(Color.CYAN);
+//                        g.drawRect(x1 +6, y1 +6, width-10, height -10);
                         
                         //Draw lines
 //                        g.setColor(Color.WHITE);
@@ -39,17 +39,27 @@ public class MyPanelClass extends JPanel {
                         //Draw oval
 //                        g.setColor(Color.LIGHT_GRAY);
 //                        g.fillOval((getWidth()-55)/2, (getHeight()-55)/2 , 55, 55);
+                        g.setColor(Color.RED);
+                        g.fillRect(x1, y1, width + 1, height);
+                        g.setColor(Color.WHITE);
+                        g.fillRect(x1, y1, width + 1 , height -35);
+                        g.setColor(Color.RED);
+                        g.fillRect(x1, y1, width + 1,height -70);
+                        g.setColor(Color.WHITE);
+                        g.fillRect(x1, y1, width + 1, height - 105);
+                        g.setColor(Color.RED);
+                        g.fillRect(x1, y1, width + 1, height -140);
                         
-//                        Polygon p = new Polygon();
-//                        p.addPoint(x1 + 5, y1 + 25);
-//                        p.addPoint(x1 + 20, y1 + 10);
-//                        p.addPoint(x1 + 35, y1 + 25);
+                        Polygon p = new Polygon();
+                        p.addPoint(x1, y1);
+                        p.addPoint(x1, y1 +height);
+                        p.addPoint(x1 + width/2, y1 + height/2);
 //                        p.addPoint(x1 + 25, y1 + 25);
 //                        p.addPoint(x1 + 25, y1 + 45);
 //                        p.addPoint(x1 + 15, y1 + 45);
 //                        p.addPoint(x1 + 15, y1 + 25);
-//                        g.setColor(Color.YELLOW);
-//                        g.fillPolygon(p);
+                        g.setColor(Color.BLUE);
+                        g.fillPolygon(p);
                         
                         Polygon p2 = new Polygon();
                         p2.addPoint(x1 + 25, y1 + 73);
@@ -63,6 +73,8 @@ public class MyPanelClass extends JPanel {
                         p2.addPoint(x1 + 34, y1 + 98);
                         p2.addPoint(x1 + 38, y1 + 83);
                         g.setColor(Color.WHITE);
-                        g.drawPolygon(p2);
+                        g.fillPolygon(p2);
+                        
+                       
             }
 }
